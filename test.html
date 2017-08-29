@@ -4,8 +4,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<title>test</title>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
 </head>
 <body>
-	<h1>我看到你了</h1>
+	<div class="part1"></div>
+	<div class="part2">
+		<button>下载</button>
+	</div>
+	<div class="part3"></div>
+	<div class="part4"></div>
 </body>
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var ua = navigator.userAgent.toLowerCase();
+		var part1 = document.getElementsByClassName('part1')[0];
+		var btn = document.getElementsByTagName('button')[0];
+		btn.onclick = function(){
+			if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                part1.innerHTML="微信打开"
+        	}
+		}
+	})
+</script>
 </html>
