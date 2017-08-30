@@ -26,7 +26,11 @@
 		btn.onclick = function(){
 			if (ua.match(/MicroMessenger/i) == "micromessenger") {
                 part1.innerHTML="微信打开"
-        	}
+        	}else if (/iphone|ipad|ipod/.test(ua)) {
+				    alert("iphone");		
+			} else if (/android/.test(ua)) {
+				    alert("android");	
+			}
 		}
 	})
 </script>
