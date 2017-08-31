@@ -21,5 +21,20 @@
 </body>
 	<script>
 		var box = document.getElementById('box');
+		var ua = navigator.userAgent.toLowerCase();
+		// if (ua.match(/MicroMessenger/i) == "micromessenger") {
+  //               // part1.innerHTML="微信打开"
+  //               //do something
+  //               box.style.backgroundColor = "#00f"
+  //       	}else
+        	 if (/iphone|ipad|ipod/.test(ua)) {
+				alert("iphone");
+				box.style.backgroundColor = "#fc0"
+				//do something
+			} else if (/android/.test(ua)) {
+				alert("android");
+				box.style.backgroundColor = "#00f"	
+				//do something
+			}
 	</script>
 </html>
