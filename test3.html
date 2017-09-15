@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>扫码判断下载加强版</title>
+	<style>
+		html, 
+		body {
+			height: 100%;
+			margin: 0;
+		}
+		#box {
+			height: 100%;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+	<script>
+		var box = document.getElementById('box');
+		var ua = navigator.userAgent.toLowerCase();
+		// if (ua.match(/MicroMessenger/i) == "micromessenger") {
+  //               // part1.innerHTML="微信打开"
+  //               //do something
+  //               box.style.backgroundColor = "#00f"
+  //       	}else
+        	 if (/iphone|ipad|ipod/.test(ua)) {
+				alert("iphone");
+				box.style.backgroundColor = "#fc0"
+				//do something
+			} else if (/android/.test(ua)) {
+				alert("android");
+				box.style.backgroundColor = "#00f"	
+				//do something
+			}
+			document.onclick=function(e){
+				box.innerHTML=e.target;
+			}
+	</script>
+</html>

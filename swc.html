@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="swc.css">
+</head>
+<body>	
+<!-- 定义类的名称 -->
+	<div class="swc">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>
+<script>
+	var swc =document.getElementsByClassName('swc');
+	function swcfc(swc){
+		for(var i=0;i<swc.length;i++){
+			// var swcs =swc[i].childNodes;
+			var swcs = swc[i].children;
+			console.log(swcs);
+			// swcs是类数组
+			console.log(swcs instanceof Array);
+			for(var i=0;i<swcs.length;i++){
+				var swcs.[i]
+			}
+		}
+	}
+	swcfc(swc);
+</script>
