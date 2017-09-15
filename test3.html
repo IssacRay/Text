@@ -17,7 +17,10 @@
 	</style>
 </head>
 <body>
-	<div id="box"></div>
+	<div id="box">
+		
+	<button>222222</button>
+	</div>
 </body>
 	<script>
 		var box = document.getElementById('box');
@@ -38,6 +41,7 @@
 			}
 			document.onclick=function(e){
 				box.innerHTML=e.target;
+				console.log(e.target)
 			}
 	</script>
 </html>
