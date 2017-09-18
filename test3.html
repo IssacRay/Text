@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-	<title>涛哥截个图比我啦</title>
+	<title>ios weixin</title>
 	<style>
 		html, 
 		body {
@@ -14,18 +14,55 @@
 			height: 100%;
 			background-color: #f00;
 		}
+		#box1{
+			height: 100%;
+			background-color: #ccc;
+		}
+		#look{
+			height: 40px;
+			background-color: #ddd;
+			border: 1px solid #000;
+		}
+		p {
+			margin: 0;
+		}
+		#lock {
+			width: 80px;
+			height: 90px;
+			border: 1px solid #000;
+		}
+		.jd {
+			width: 70px;
+			height: 30px;
+			background-color: #ddd;
+			border: 1px solid #000;
+		}
 	</style>
 </head>
 <body>
 	<div id="box">
+		<p>显示栏</p>
+		<div id="look"></div>
+		<button>222222</button>
+		<button>333333</button>
+		<div id="lock"> 锁死 </div>
+		<button id='bd'>跳转百度</button>
+		<div class="jd">
+			跳转京东
+		</div>
+	</div>
+	<div id="box1">
 		
-	<button>222222</button>
 	</div>
 </body>
 	<script>
 		var box = document.getElementById('box');
 		var ua = navigator.userAgent.toLowerCase();
-		// if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		var box1 = document.getElementById('box1');
+		var jd =document.getElementsByClassName('jd')[0]
+		var bd = document.getElementById('bd');
+		var lock =	document.getElementById('lock');
+			// if (ua.match(/MicroMessenger/i) == "micromessenger") {
   //               // part1.innerHTML="微信打开"
   //               //do something
   //               box.style.backgroundColor = "#00f"
@@ -40,9 +77,19 @@
 				//do something
 			}
 			document.onclick=function(e){
-				box.innerHTML=e.target;
-				console.log(e.target)
-
+				look.innerText=e.target.innerText;
+				console.log(e.target.innerText)
+				if(e.target == jd) {
+					window.location.href = "https://www.jd.com";
+					console.log(2);
+				}else if(e.target == bd){
+					window.location.href = "https://www.baidu.com";
+					console.log(1);
+				}
+				else if (e.target == lock){
+					document.body.style.overflow = 'hidden';
+					document.body.style.height = '100%';
+				}
 			}
 	</script>
 </html>
