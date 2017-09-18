@@ -37,9 +37,13 @@
 			background-color: #ddd;
 			border: 1px solid #000;
 		}
+		#banner {
+
+		}
 	</style>
 </head>
 <body>
+<div id="banner">
 	<div id="box">
 		<p>显示栏</p>
 		<div id="look"></div>
@@ -54,6 +58,7 @@
 	<div id="box1">
 		
 	</div>
+</div>
 </body>
 	<script>
 		var box = document.getElementById('box');
@@ -62,6 +67,7 @@
 		var jd =document.getElementsByClassName('jd')[0]
 		var bd = document.getElementById('bd');
 		var lock =	document.getElementById('lock');
+		var banner = document.getElementById('banner');
 			// if (ua.match(/MicroMessenger/i) == "micromessenger") {
   //               // part1.innerHTML="微信打开"
   //               //do something
@@ -76,7 +82,7 @@
 				box.style.backgroundColor = "#00f"	
 				//do something
 			}
-			document.onclick=function(e){
+			banner.onclick=function(e){
 				look.innerText=e.target.innerText;
 				console.log(e.target.innerText)
 				if(e.target == jd) {
@@ -91,12 +97,12 @@
 					document.body.style.height = '100%';
 				}
 			}
-			lock.onclick=function(){
-				look.innerText=lock.innerText;
-			}
-			jd.onclick=function(){
-				look.innerText=jd.innerText;
-				window.location.href = "https://www.jd.com";
-			}
+			// lock.onclick=function(){
+			// 	look.innerText=lock.innerText;
+			// }
+			// jd.onclick=function(){
+			// 	look.innerText=jd.innerText;
+			// 	window.location.href = "https://www.jd.com";
+			// }
 	</script>
 </html>
